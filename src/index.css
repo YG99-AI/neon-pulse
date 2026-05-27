@@ -42,6 +42,9 @@ body {
   .glow-neon {
     box-shadow: 0 0 15px var(--color-cyber-neon), inset 0 0 10px var(--color-cyber-neon);
   }
+  .glow-green {
+    box-shadow: 0 0 10px var(--color-cyber-green), 0 0 20px var(--color-cyber-green);
+  }
   
   .glass-panel {
     background: rgba(24, 24, 27, 0.6);

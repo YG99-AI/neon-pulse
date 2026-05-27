@@ -61,7 +61,7 @@ const initialTracks: Record<TrackId, TrackData> = {
   hihat: {
     id: 'hihat',
     name: 'HIHAT',
-    color: 'bg-cyber-neon',
+    color: 'bg-cyber-green',
     steps: createEmptySteps(),
     volume: -12,
     mute: false,
