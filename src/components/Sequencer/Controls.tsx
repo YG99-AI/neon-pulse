@@ -1,6 +1,6 @@
 import { useAudioStore } from '../../store/useAudioStore'
 import { audioEngine } from '../../audio/AudioEngine'
-import { Play, Square } from 'lucide-react'
+import { Play, Square, RotateCcw } from 'lucide-react'
 import clsx from 'clsx'
 
 export const Controls = () => {
@@ -10,6 +10,7 @@ export const Controls = () => {
   const setBpm = useAudioStore(state => state.setBpm)
   const masterVolume = useAudioStore(state => state.masterVolume)
   const setMasterVolume = useAudioStore(state => state.setMasterVolume)
+  const clearAllTracks = useAudioStore(state => state.clearAllTracks)
   
   // Initialize audio engine on first interaction
   const handlePlayToggle = async () => {
@@ -44,6 +45,14 @@ export const Controls = () => {
           className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white/70 hover:bg-white/10 hover:text-white transition-all"
         >
           <Square size={16} fill="currentColor" />
+        </button>
+        
+        <button
+          onClick={clearAllTracks}
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white/70 hover:bg-cyber-pink/20 hover:text-cyber-pink transition-all"
+          title="清空所有谱曲"
+        >
+          <RotateCcw size={16} />
         </button>
       </div>
       
