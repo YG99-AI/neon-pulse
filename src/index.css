@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-bg: #09090b;
+  --color-cyber-grid: #18181b;
+  --color-cyber-pink: #f43f5e;
+  --color-cyber-blue: #0ea5e9;
+  --color-cyber-purple: #8b5cf6;
+  --color-cyber-neon: #38bdf8;
+  --color-cyber-green: #10b981;
+}
+
+:root {
+  background-color: var(--color-cyber-bg);
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 防止出现滚动条 */
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-cyber-bg);
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* 自定义一些发光动画和实用类 */
+@layer utilities {
+  .glow-pink {
+    box-shadow: 0 0 10px var(--color-cyber-pink), 0 0 20px var(--color-cyber-pink);
+  }
+  .glow-blue {
+    box-shadow: 0 0 10px var(--color-cyber-blue), 0 0 20px var(--color-cyber-blue);
+  }
+  .glow-neon {
+    box-shadow: 0 0 15px var(--color-cyber-neon), inset 0 0 10px var(--color-cyber-neon);
+  }
+  
+  .glass-panel {
+    background: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
